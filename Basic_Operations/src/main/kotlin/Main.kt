@@ -21,4 +21,6 @@ fun main(args: Array<String>) {
 
     println("Fish Left: $fishLeft and Aquarium needed for 30 fish: $aquariumsQuantity ")
 
+    // Bonus - All fish numbers are prime.
+
 }
