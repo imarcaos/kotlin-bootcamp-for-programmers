@@ -10,3 +10,8 @@
  - - 1.6 - Hello Kotlin
  
  - 2 - Kotlin Basics
+ - - 2.6 - Operators (variables, nullability, nullability/lists, null checks)
+ - - 2.8 - Strings
+ - - 2.10- Arrays and Loops
+
+ - 3 - Funcions
