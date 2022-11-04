@@ -39,9 +39,20 @@ fun main(args: Array<String>) {
     Extra practice:
     Use a for loop to run the program 10 times, or until the "Take it easy" fortune has been selected.
      */
-    val fortunePhrase = getFortuneCookie()
+
+    // Exercise 1-10
+    /*val fortunePhrase = getFortuneCookie()
 
     println("Your fortune is: $fortunePhrase")
+    */
+
+    // Extra exercise
+    for (i in 1..10) {
+        val fortunePhrase = getFortuneCookie()
+        println("$i - Your fortune is: $fortunePhrase")
+        println("------------------------------------------")
+        if (fortunePhrase.contains("Take it easy and enjoy life!")) break
+    }
 
 }
 
@@ -59,6 +70,6 @@ fun getFortuneCookie() :String {
     print("Enter your birthday: ")
     var birthday = readLine()?.toIntOrNull() ?: 1
     var fortuneIndex = birthday.rem(fortunePhrases.size)
-
+    // println(Random().nextInt(fortuneIndex)) // for test only
     return fortunePhrases[Random().nextInt(fortuneIndex)]
 }
