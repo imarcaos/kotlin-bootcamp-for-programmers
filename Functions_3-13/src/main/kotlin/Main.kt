@@ -1,35 +1,51 @@
-fun main(args: Array<String>) {
+fun main() {
 
     /* 08/11/2022
-    Exercise: Functions- ex. 3-13 - WhatShouldIDoToday
+    Exercise: Functions- ex. 3-15 - WhatShouldIDoToday - part2
 
     Practice Time
-    Create a program that suggests an activity based on various parameters.
+    Improve your whatShouldIDoToday() program with the new knowledge from this segment.
 
-    1-Start in a new file with a main function.
-    2-From main(), create a function, whatShouldIDoToday().
-    3-Let the function have three parameters.
-        -mood: a required string parameter
-        -weather: a string parameter that defaults to "sunny"
-        -temperature: an Integer parameter that defaults to 24 (Celsius).
+    1-Add 3 more situations and activities. For example:
+        mood == "sad" && weather == "rainy" && temperature == 0 -> "stay in bed"
+        temperature > 35 -> "go swimming"
+    2-Create a single-expression function for each condition and then use it in your when expression.
 
-    4-Use a when construct to return some activities based on combinations of conditions. For example:
-        mood == "happy" && weather == "Sunny" -> "go for a walk"
-        else -> "Stay home and read."
+    Challenge
 
-    5-Copy/paste your finished function into REPL, and call it with combinations of arguments. For example:
-        whatShouldIDoToday("sad")
-        > Stay home and read.
+    Instead of passing in the mood, get a mood string from the user.
+    Hint: The !! operator may come handy.
 
-    Note: Keep your work as you will do more with this code in the next practice.
+    Loops
+    This lesson introduced the while and repeat loops. To practice using them, do the following:
+
+        - Change your fortune cookie program to use repeat() instead of a for loop.
+        What happens to the break instruction? Using the error message from the compiler,
+        with what you've learned so far, can you think of why?
+        - Change your fortune cookie program to use a while loop,
+        which is the better choice when you are looping until a condition is met.
      */
 
     println(whatShouldIDoToday("sad"))
+    println(whatShouldIDoToday("happy", weather = "sunny"))
+    println(whatShouldIDoToday("sad", weather = "rainy", temperature = 0))
+    println(whatShouldIDoToday("Great", temperature = 35)) // nothing to report because need mood
+
+    print("What your mood at this moment?  ")
+    println(whatShouldIDoToday(readLine()!!)) // the operator !! asserts that an expression is non-null.
 }
 
+fun happySunny (mood: String, weather: String) = mood == "happy" && weather == "Sunny"
+fun sadRainy (mood: String, weather: String, temperature: Int) = mood == "sad" && weather == "rainy" && temperature == 0
+fun temp (temperature: Int) = temperature > 35
+fun sad (mood: String) = mood == "sad"
+san
 fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int = 24): String {
     return when {
-        mood == "happy" && weather == "Sunny" -> "go for a walk"
-        else -> "Stay home and read"
+        happySunny(mood, weather) -> "go for a walk"
+        sadRainy(mood, weather, temperature) -> "$mood ,$weather and $temperature ªC - stay in bed"
+        temp(temperature) -> "$temperature ªC - go swimming"
+        sad(mood) -> "$mood!! -> The life is unic, get up!!"
+        else -> "Nothing Reported - Stay home and read"
     }
 }
