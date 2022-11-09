@@ -1,6 +1,6 @@
 fun main() {
 
-    /* 08/11/2022
+    /* 09/11/2022 - More updates
     Exercise: Functions- ex. 3-15 - WhatShouldIDoToday - part2
 
     Practice Time
@@ -39,10 +39,9 @@ fun happySunny (mood: String, weather: String) = mood == "happy" && weather == "
 fun sadRainy (mood: String, weather: String, temperature: Int) = mood == "sad" && weather == "rainy" && temperature == 0
 fun temp (temperature: Int) = temperature > 35
 fun sad (mood: String) = mood == "sad"
-san
 fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int = 24): String {
     return when {
-        happySunny(mood, weather) -> "go for a walk"
+        happySunny(mood, weather) -> "$mood and $weather - go for a walk"
         sadRainy(mood, weather, temperature) -> "$mood ,$weather and $temperature ªC - stay in bed"
         temp(temperature) -> "$temperature ªC - go swimming"
         sad(mood) -> "$mood!! -> The life is unic, get up!!"

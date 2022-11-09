@@ -3,7 +3,7 @@ import java.util.*
 fun main(args: Array<String>) {
 
     /* 04/11/2022
-    Exercise: Functions- ex.3-7
+    Exercise: Functions- ex.3-7 - getFortuneCookie
 
     Create a program with a function that returns a fortune cookie message that you can print.
 
@@ -38,6 +38,18 @@ fun main(args: Array<String>) {
 
     Extra practice:
     Use a for loop to run the program 10 times, or until the "Take it easy" fortune has been selected.
+
+    *******************************************
+    New lesson from 3-15 - 09/11/2022
+    Loops
+    This lesson introduced the while and repeat loops. To practice using them, do the following:
+
+        - Change your fortune cookie program to use repeat() instead of a for loop.
+        What happens to the break instruction? Using the error message from the compiler,
+        with what you've learned so far, can you think of why?
+        - Change your fortune cookie program to use a while loop,
+        which is the better choice when you are looping until a condition is met.
+     *******************************************
      */
 
     // Exercise 1-10
@@ -47,11 +59,34 @@ fun main(args: Array<String>) {
     */
 
     // Extra exercise
+    /*
     for (i in 1..10) {
         val fortunePhrase = getFortuneCookie()
         println("$i - Your fortune is: $fortunePhrase")
         println("------------------------------------------")
         if (fortunePhrase.contains("Take it easy and enjoy life!")) break
+    }
+    */
+
+    // Repeat - 09/11/2022
+    /*
+    var fortunePhrase: String
+    repeat(10) {
+        fortunePhrase = getFortuneCookie()
+        println("$it - Your fortune is: $fortunePhrase")
+        println("------------------------------------------")
+        // if (fortunePhrase.contains("Take it easy and enjoy life!")) // break is only allowed inside the loop
+    }
+    */
+
+    // While - 09/11/2022
+    var fortunePhrase = ""
+    var i: Int = 1
+    while (!fortunePhrase.contains("Take it easy") && i <= 5) {
+        fortunePhrase = getFortuneCookie()
+        println("$i - Your fortune is: $fortunePhrase")
+        println("------------------------------------------")
+        i++
     }
 
 }
