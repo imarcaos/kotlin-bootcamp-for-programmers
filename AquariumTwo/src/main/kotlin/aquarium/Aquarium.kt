@@ -23,5 +23,7 @@ class Aquarium {
     }
     */
     // ex4  function represented as properties in one line
-    val volume : Int get() = width * height * length / 1000
+    var volume : Int
+        get() = width * height * length / 1000
+        set(value) {height = (value * 1000) / (width * length)} // change height value
 }

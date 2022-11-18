@@ -2,7 +2,7 @@ package aquarium
 
 fun main(args: Array<String>) {
     /* 18/11/2022
-        Defining Classes class ex.3 Using method get()
+        Defining Classes class ex.4 Using method set()
     */
 
     buildAquarium()
