@@ -25,3 +25,5 @@
  - - 3.17 - List of spices using filters and char to search
  - - 3.19 - Using function Lambdas
 
+ - 4 - Classes
+
