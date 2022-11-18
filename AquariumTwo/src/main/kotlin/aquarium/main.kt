@@ -2,7 +2,7 @@ package aquarium
 
 fun main(args: Array<String>) {
     /* 18/11/2022
-        Defining Classes class ex.2 Change the val to var to receive another value
+        Defining Classes class ex.3 Using method get()
     */
 
     buildAquarium()
@@ -17,4 +17,5 @@ fun buildAquarium() {
     myAquarium.height = 80
 
     println("Height: ${myAquarium.height} cm")
+    println("Volume: ${myAquarium.volume} liters")
 }
