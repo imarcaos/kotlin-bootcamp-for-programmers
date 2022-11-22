@@ -1,8 +1,8 @@
 package aquarium
 
 fun main(args: Array<String>) {
-    /* 18/11/2022
-        Defining Classes class ex.4 Using method set()
+    /* 22/11/2022
+        Classes class ex.4-4 - Constructors
     */
 
     buildAquarium()
@@ -18,4 +18,8 @@ fun buildAquarium() {
 
     println("Height: ${myAquarium.height} cm")
     println("Volume: ${myAquarium.volume} liters")
+
+    //ex: 1
+    val smallAquarium = Aquarium(length = 20, width = 15, height = 30)
+    println("Small Aquarium: ${smallAquarium.volume} liters")
 }
