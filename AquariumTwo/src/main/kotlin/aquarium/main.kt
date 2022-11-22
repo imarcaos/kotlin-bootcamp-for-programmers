@@ -23,7 +23,7 @@ fun buildAquarium() {
     val smallAquarium = Aquarium(length = 20, width = 15, height = 30)
     println("Small Aquarium: ${smallAquarium.volume} liters")
 
-    //ex: 2
+    //ex: 2 - constructor with parameters
     val myAquarium2 = Aquarium(numberOfFish = 9)
     println("Small Aquarium 2: ${myAquarium2.volume} liters with "
             +"lenght ${myAquarium2.length}, "
