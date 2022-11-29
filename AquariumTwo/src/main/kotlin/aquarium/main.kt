@@ -2,10 +2,11 @@ package aquarium
 
 fun main(args: Array<String>) {
     /* 22/11/2022
-        Classes class ex.4-4 - Constructors
+        Classes class ex.4-9 - Interfaces and Abstraction
     */
 
     buildAquarium()
+    makeFish() // ex.4.9
 }
 
 fun buildAquarium() {
@@ -29,4 +30,12 @@ fun buildAquarium() {
             +"lenght ${myAquarium2.length}, "
             +"width ${myAquarium2.width}, "
             +"height ${myAquarium2.height}")
+}
+
+//ex.4-9
+fun makeFish() {
+    val shark = Shark()
+    val pleco = Plecostomus()
+
+    println("Shark: ${shark.color} \nPlecostomus: ${pleco.color}")
 }
